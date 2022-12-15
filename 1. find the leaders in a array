@@ -1,0 +1,11 @@
+1. find the leaders in a array
+    [1, 2, 4, 4, 5, 1] => 2
+    [1, 2, 3, 4, 5, 1] => 4
+2. change css backgroud on click and on hover on a div
+3. print hello world for every 2 secs inside a div
+4. Take an input from user and arrange the words in alphabetical order and display the same
+5. print the structure
+    https://cdn.discordapp.com/attachments/962331704247328830/962332971388506152/starNumberPattern
+6. Zip codes consist of 5 consecutive digits. Given a string, write a function to determine whether the input is a valid zip code. A valid zip code is as follows: Must only contain numbers (no non-digits allowed). Must not contain any spaces. Must not be greater than 5 digits in length. Examples isValid("59001") ➞ true
+    Take an input from user and validate if the pincode is given formate
+7. Accept Two inputs from user, on Submit, check whether the two names match with the FLAMES

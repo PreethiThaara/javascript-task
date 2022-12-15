@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Clock</title>
+  </head>
+  <style>
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.clockBox{
+  background-color: black;
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+}
+#time{
+  color:rgb(18, 184, 184);
+  font-size: 2.5em;
+  font-weight: bold;
+  padding-top: 60px;
+  padding-left: 40px;
+  margin-bottom: 0;
+}
+#date{
+  color:rgb(18, 184, 184);
+  font-weight: bold;
+  font-size: 1.6em;
+  padding-left: 40px;
+}
+  </style>
+  <body>
+    <div class="flex">
+    <div class="clockBox">
+      <p id="time"></p>
+      <p id="date"></p>
+    </div>
+  </div>
+    <script>
+let clock = () => {
+    let date = new Date();
+    let hrs = date.getHours();
+    let mins = date.getMinutes();
+    let secs = date.getSeconds();
+    let period = "AM";
+    if (hrs == 0) {
+     hrs = 12;
+    } else if (hrs >= 12) { 
+    } if (hrs > 12) {
+      hrs = hrs - 12;
+      period = "PM";
+    }
+    hrs = hrs < 10 ? "0" + hrs : hrs;
+    mins = mins < 10 ? "0" + mins : mins;
+    secs = secs < 10 ? "0" + secs : secs;
+  
+    let time = `${hrs}:${mins}:${secs}:${period}`;
+    document.getElementById("time").innerHTML= time;
+
+    let dat = date.getDate();
+    let day = date.toLocaleString('default', { weekday: 'short' });
+    let month = date.toLocaleString('default', { month: 'long' });
+    let year = date.getFullYear();
+    let currentDate = `${dat} ${day} ${month} ${year}`;
+    document.getElementById("date").innerHTML = currentDate;
+    
+    setInterval(clock, 1000);
+  };
+  clock();
+    </script>
+  </body>
+</html>
+
+

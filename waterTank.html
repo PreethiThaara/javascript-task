@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>waterTank</title>
+</head>
+
+<body>
+      <h2>Water Tank Problem.</h2>
+      <div class="tank" id="tank">
+            <div id="tankCapacity" style="height:20px;width: 100px;  color: black; text-align: center;"></div>
+            <button onclick="startWaterFlow()">Open!</button>
+            <button onclick="stopWaterFlow()">Close!</button>
+      </div>
+      <script>
+            let capacity = 100;
+            let reduceCount = 10;
+            let openTank = null;
+            
+            waterTankFunction = () => {
+                  capacity -= reduceCount;
+                  if (capacity <= 0) {
+                        document.getElementById("tankCapacity").innerHTML = `Tank Empty`;
+                        clearInterval(openTank);
+                  } else if (capacity >= 0) {
+                        document.getElementById("tankCapacity").innerHTML = `is  ${capacity}`;
+                  }
+            };
+            startWaterFlow = () => {
+                  openTank = setInterval(() => {
+                        waterTankFunction();
+                  }, 1000);
+            };
+            stopWaterFlow = () => {
+                  clearInterval(openTank);
+                  waterTankFunction();
+            }
+      </script>
+</body>
+
+</html>

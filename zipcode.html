@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>zipcode</title>
+</head>
+<body>
+<script>
+var validZipTest = /(^\d{5}$)/;
+//var validZipTest = /(^\d{5}$)|(^\d{5-4}$)/;
+ function checkValid()
+  {
+	  let userZipCode = document.getElementById("zipcode").value;
+	  if(!validZipTest.test(userZipCode))  {
+		alert("Failed! Please enter valid zip code. ");
+	  } else {
+		  alert("Success! Zip code Verified.");
+	  }
+  }
+  </script>
+	  <h3>  JavaScript Zip code Validation </h3>
+	  <form onsubmit ="return checkValid()">
+		  <td> Enter Zip code : </td>
+		  <input id = "zipcode" value = "">
+		  <br><br>
+	  </form>
+<button onclick="checkValid()">Check Valid</button>
+</body>
+<html>

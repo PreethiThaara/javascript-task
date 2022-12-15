@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover</title>
+</head>
+<style>
+    .container{
+        width: 100rem;
+        height: 100rem;
+        display: flex;
+        background: #ddd;
+        
+    }
+    .box{
+    
+    width: 50rem;
+    height: 50rem;
+    background: blue;
+        }
+    .box:hover{
+        
+        background: red;
+        box-shadow: 2px 2px;
+    }
+    /* .box2{
+    
+    width: 50rem;
+    height: 50rem;
+    background: green;
+        }
+     .box2:active{
+         
+        background:purple;
+
+     } */
+     #demo{
+
+    width: 50rem;
+    height: 50rem;
+    background: yellow;
+        }
+     
+</style>
+<body>
+    <div class = "container" >
+         <div class="box">
+         </div>
+         
+    <div id="demo" onclick="myFunction()"></p></div>
+
+        <script>
+        function myFunction() {
+          document.getElementById("demo").style.backgroundColor = "purple";
+        }
+        </script>
+</body>
+</html>

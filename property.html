@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type='text' id='name' ><br><br>
+    <input type='button' value='Click' onclick='display()'>
+    <script>
+        let studentData={
+'name':'kent',
+'interest':['cricket','volleyBall','football'],
+'age':27,
+'academics':{
+'English':100,
+'Math':100,
+}, 
+}
+display=()=>{
+    let userinp=document.getElementById('name').value;
+    document.write(studentData.hasOwnProperty(userinp));
+}
+// function display(){
+// var found = arr.some(function(obj) {
+//   return studentData.name == search.kent;
+// });
+// document.write(Object.hasOwnProperty(studentData, 'name'));
+// alert(studentData);
+// }
+//check if the object contains property 'name'  
+</script>
+</body>
+</html>
